@@ -1,6 +1,6 @@
 import { Address, BitgesellBlockchainSDK, Blockchain, Transaction } from './api'
 
-export = {
+export {
     Address,
     BitgesellBlockchainSDK,
     Blockchain,
