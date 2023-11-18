@@ -1,5 +1,5 @@
 {
-  "name": "bglsdk",
+  "name": "bgl-blockchain-sdk",
   "version": "1.0.0",
   "description": "A comprehensive library for Bitgesell API",
   "main": "build/main/index.js",
