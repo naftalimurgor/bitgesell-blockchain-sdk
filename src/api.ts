@@ -1,30 +1,21 @@
-import axios from 'axios'
+import { Address, } from './classes/Address'
+import { Blockchain } from './classes/Blockchain'
+import { Mempool } from './classes/Mempool'
+import { Transaction } from './classes/Transactions'
+import { SDKConfig } from './types'
 
-type SDKConfig = {
-  baseAPIURL: string
-  logger: (arg: string) => void
-  apiKey?: string
-}
 
 export class BitgesellBlockchainSDK {
-  private baseAPIURL: string
-  private baseV1URL: string = 'https://api.bitaps.com/bgl/v1/blockchain'
-  private logger: (arg: string) => void
-
+  public readonly blockchain: Blockchain
+  public readonly tx: Transaction
+  public readonly mempool: Mempool
+  public readonly address: Address
   constructor(config: SDKConfig) {
-    this.baseAPIURL = config.baseAPIURL || this.baseV1URL
-    this.logger = config.logger || ((arg: string) => arg)
-  }
-
-  private async _get(url: string) {
-    try {
-      const res = await axios.get(`${this.baseAPIURL}/${url}`)
-      const { data } = res.data
-      return data
-    } catch (error) {
-      this.logger(error)
-      return
-
-    }
+    this.blockchain = new Blockchain(config)
+    this.tx = new Transaction(config)
+    this.mempool = new Mempool(config)
+    this.address = new Address(config)
   }
 }
+
+export { Address, Mempool, Transaction, SDKConfig, Blockchain }
