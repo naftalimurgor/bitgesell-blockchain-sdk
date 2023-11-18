@@ -136,7 +136,7 @@ export class Blockchain {
    * getBlockUTXO fetch utxo in a block at a certain height
    */
   public async getBlockUTXO(blockHeight: number) {
-    const url = `${this.apiV1URL}//block/utxo/${blockHeight}`
+    const url = `${this.apiV1URL}/block/utxo/${blockHeight}`
     const data = await this._get(url)
     return data as UTXOs
   }
@@ -150,7 +150,6 @@ export class Blockchain {
     } catch (error) {
       this.logger(error)
       return
-
     }
   }
 
