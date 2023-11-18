@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { AddressTransaction, SDKConfig } from '../types'
+import { AddressTransaction, SDKConfig, TransactionMerkelProof } from '../types'
 
 export class Transaction {
   private apiV1URL: string
@@ -23,8 +23,10 @@ export class Transaction {
    * @param txHash
    * getTransactonMerkelProof fetches the MerkelProof of a transaction
    */
-  public getTransactonMerkelProof(txHash: string) {
-
+  public async getTransactonMerkelProof(txHash: string) {
+    const url = `${this.apiV1URL}/transaction/merkle_proof/${txHash}`
+    const data = await this._get(url)
+    return data as TransactionMerkelProof
   }
 
   /// BEGIN PRIVATE METHODS
