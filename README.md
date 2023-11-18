@@ -17,27 +17,27 @@ yarn add bgl-blockchain-sdk # npm i
 To initialize the sdk library
 
 ```javascript
-import {bitgesell-blockchain-sdk} from 'bitgesell-blockchain-sdk'
+import {BitgesellBlockchainSDK} from 'bitgesell-blockchain-sdk'
 
 const sdkConfig = {
   baseAPIURL: 'https://api.bitaps.com/bgl/v1/blockchain',
  logger: console.log // optional
 }
 
-const bitgesell-blockchain-sdkSDK = new bitgesell-blockchain-sdkSDK(sdkConfig)
+const bitgesellBlockchainSDK = new BitgesellBlockchainSDK(sdkConfig)
 ```
 
 To initialize the sdk library in Commonjs pattern:
 
 ```javascript
-const {bitgesell-blockchain-sdk} = require('bitgesell-blockchain-sdk')
+const {BitgesellBlockchainSDK} = require('bitgesell-blockchain-sdk')
 
 const sdkConfig = {
   baseAPIURL: 'https://api.bitaps.com/bgl/v1/blockchain',
  logger: console.log // optional
 }
 
-const bitgesell-blockchain-sdkSDK = new bitgesell-blockchain-sdkSDK(sdkConfig)
+const bitgesellBlockchainSDK = new BitgesellBlockchainSDK(sdkConfig)
 ```
 ### Query Transactions
 To query transacton by the transaction `hash`:
@@ -45,7 +45,7 @@ To query transacton by the transaction `hash`:
 ```javascript
 (async() => {
     const txHash = 'a transaction hash'
-    const transaction = await bitgesell-blockchain-sdkSDK.tx.getTransactionByHash(txHash)
+    const transaction = await bitgesellBlockchainSDK.tx.getTransactionByHash(txHash)
     console.log(txHash)
 })()
 ```
@@ -54,7 +54,7 @@ To query mempool state:
 
 ```javascript
 (async() => {
-    const mempoolState = await bitgesell-blockchain-sdkSDK.mempool.getMempoolState()
+    const mempoolState = await bitgesellBlockchainSDK.mempool.getMempoolState()
     console.log(mempoolState)
 })()
 ```
@@ -64,7 +64,7 @@ To query block by the blockHeight:
 
 ```javascript
 (async() => {
-    const block = await bitgesell-blockchain-sdkSDK.blockchain.getBlockByHeight(206)
+    const block = await bitgesellBlockchainSDK.blockchain.getBlockByHeight(206)
     console.log(block)
 })()
 ```
