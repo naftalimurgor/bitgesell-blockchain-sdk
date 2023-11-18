@@ -10,7 +10,7 @@ export class Blockchain {
   }
 
   /**
-   * @param blockHash block hash for bock to be fetched
+   * @param blockHash block hash for block to be fetched
    * getBlockByHash returns a given block by a given block hash
    */
   public async getBlockByHash(blockHash: string): Promise<Block> {
@@ -19,7 +19,16 @@ export class Blockchain {
     return data as Block
 
   }
+  /**
+   * @param blockHash block blockheight for block to be fetched
+   * getBlockByHash returns a given block by a given block hash
+   */
+  public async getBlockByHeight(blockHeight: string): Promise<Block> {
+    const url = `${this.apiV1URL}/block/${blockHeight}`
+    const data = await this._get(url)
+    return data as Block
 
+  }
   /**
    * @param blockCount number of blocks to fetch eg. last 10 blocks etc.
    * getBlockHeight returns block at a given blockcount/blockheight
