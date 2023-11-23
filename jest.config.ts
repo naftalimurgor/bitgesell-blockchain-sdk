@@ -1,5 +1,5 @@
 import { Config } from '@jest/types'
-
+// https://github.com/kulshekhar/ts-jest/issues/2629
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
@@ -20,7 +20,7 @@ const config: Config.InitialOptions = {
   // https://github.com/jest-community/jest-extended: Extended matchers
   setupFilesAfterEnv: ['jest-extended/all'],
   transform: {
-    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.ts?$': 'babel-jest',
   },
 }
 

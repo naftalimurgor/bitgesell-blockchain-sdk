@@ -1,6 +1,6 @@
-import { SDKConfig } from "../types";
+// import { SDKConfig } from '../types/index';
 
-export const sdkConfig: SDKConfig = {
+export const sdkConfig = {
     baseAPIURL: 'https://api.bitaps.com/bgl/v1/blockchain',
     logger: console.log
 }

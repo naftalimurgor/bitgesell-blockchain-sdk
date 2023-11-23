@@ -2,6 +2,7 @@ import { BitgesellBlockchainSDK } from "../api"
 import { sdkConfig } from "./sdkConfig"
 
 describe('Blockchain API Wrapper tests', () => {
+
   let bitgesellBlockchainSDK: BitgesellBlockchainSDK
   const blockHash = ''
   const blockHeight = 206
