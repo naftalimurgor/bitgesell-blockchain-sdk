@@ -4,13 +4,24 @@ const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   verbose: true,
+  extensionsToTreatAsEsm: ['.ts'],
   automock: false,
   clearMocks: true,
   collectCoverage: true,
-  roots: ['src/__tests__'],
-  testPathIgnorePatterns: ['src/types'],
+  coverageProvider: 'babel',
+  roots: ['src/__tests__/'],
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  globals: {
+    "ts-jest": {
+      isolatedModules: true
+    }
+  },
+  testPathIgnorePatterns: ['src/types', 'src/__tests__/sdkConfig.ts'],
   // https://github.com/jest-community/jest-extended: Extended matchers
   setupFilesAfterEnv: ['jest-extended/all'],
+  transform: {
+    '^.+\\.ts?$': 'ts-jest',
+  },
 }
 
 export default config
