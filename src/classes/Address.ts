@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { AddressBlance, AddressTransactions, AddressUTXOs, SDKConfig } from "../types"
+import { AddressBalance, AddressTransactions, AddressUTXOs, SDKConfig } from "../types"
 
 export class Address {
   private apiV1URL: string
@@ -17,7 +17,7 @@ export class Address {
   public async getAddressBalance(address: string) {
     const url = `${this.apiV1URL}/address/state/${address}`
     const data = await this._get(url)
-    return data as AddressBlance
+    return data as AddressBalance
   }
 
   /**

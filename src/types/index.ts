@@ -134,7 +134,7 @@ export type MempoolRecommendedFee = {
 } /// END Mempool Types
 
 /// BEGIN Address types
-export type AddressBlance = {
+export type AddressBalance = {
   balance: number,
   receivedAmount: number,
   receivedTxCount: number,
