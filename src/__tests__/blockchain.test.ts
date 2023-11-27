@@ -4,8 +4,9 @@ import { sdkConfig } from "./sdkConfig"
 describe('Blockchain API Wrapper tests', () => {
 
   let bitgesellBlockchainSDK: BitgesellBlockchainSDK
-  const blockHash = ''
-  const blockHeight = 206
+  // https://bitgesellexplorer.com/block-height/188547
+  const blockHash = '00000000000000985c45a5acb8951598a9e1497acde2d66334caa96a0b1c8a63'
+  const blockHeight = 188547
 
   beforeAll(() => {
     bitgesellBlockchainSDK = new BitgesellBlockchainSDK(sdkConfig)
@@ -46,15 +47,15 @@ describe('Blockchain API Wrapper tests', () => {
   })
 
   it('should fetch block data by date in yyyy-mmd-dd', async () => {
-    /// date yyyy-mm-dd
-    const date = '2023-11-5'
+    /// date yyyymmdd
+    const date = '20231105'
     const block = await bitgesellBlockchainSDK.blockchain.getBlockDataByDate(date)
     expect(block).toBeDefined()
   })
 
-  it('should fetch block by given date', async () => {
-    /// date yyyy-mm-dd
-    const date = '2023-11-5'
+  it('should fetch blocks by given date', async () => {
+    /// date yyyy-mmdd
+    const date = '20231105'
     const block = await bitgesellBlockchainSDK.blockchain.getBlocksByDate(date)
     expect(block).toBeDefined()
   })
