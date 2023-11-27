@@ -10,7 +10,7 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   coverageProvider: 'babel',
   roots: ['src/__tests__/'],
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  transformIgnorePatterns: ['node_modules/(?!axios)'],
   globals: {
     "ts-jest": {
       isolatedModules: true
