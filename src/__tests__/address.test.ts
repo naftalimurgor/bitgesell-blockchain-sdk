@@ -1,7 +1,12 @@
 import { BitgesellBlockchainSDK } from "../api"
-import { sdkConfig } from "./sdkConfig"
+// import { sdkConfig } from "./sdkConfig"
 
-describe('Address Wrapper class tests', () => {
+describe.only('Address Wrapper class tests', () => {
+  const sdkConfig = {
+    baseAPIURL: 'https://api.bitaps.com/bgl/v1/blockchain',
+    logger: console.log
+  }
+
   let bitgesellBlockchainSDK: BitgesellBlockchainSDK
   const bitgesellAddress = 'bgl1qlmzckh904vze03n0lwzptt5dkmvf2vj3ev4qm9'
 
@@ -12,6 +17,7 @@ describe('Address Wrapper class tests', () => {
   it('should fetch address balance', async () => {
     try {
       const addressBalance = await bitgesellBlockchainSDK.address.getAddressBalance(bitgesellAddress)
+      console.log(addressBalance)
       expect(addressBalance).toBeDefined()
     } catch (error) {
       console.log(error)
@@ -28,11 +34,10 @@ describe('Address Wrapper class tests', () => {
     expect(addressUTXOs).toBeDefined()
   })
 
-  it('should get address transactions', async () => {
+  it('should get address unconfirmed transactions', async () => {
     const addressTxes = await bitgesellBlockchainSDK.address.getUnconfirmedAddressTransactions(bitgesellAddress)
     expect(addressTxes).toBeDefined()
   })
-
 
 
 })
