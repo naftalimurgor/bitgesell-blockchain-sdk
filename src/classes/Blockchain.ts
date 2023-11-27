@@ -54,7 +54,7 @@ export class Blockchain {
    * getBlocksByDate fetches blocks by date in the format YYYYMMDD
    */
   public async getBlocksByDate(date: string): Promise<Array<Block>> {
-    const url = `${this.apiV1URL}/blocks/date/${date}`
+    const url = `${this.apiV1URL}/blocks/${date}`
     const data = await this._get(url)
     return data as Array<Block>
   }
@@ -95,7 +95,7 @@ export class Blockchain {
    * getBlockDataLastNBlocks fetch block data by last n blocks of data
    */
   public async getBlockDataLastNBlocks(blockCount: number): Promise<Array<BlockData>> {
-    const url = `${this.apiV1URL}/blocks/data/last/${blockCount}}`
+    const url = `${this.apiV1URL}/blocks/data/last/${blockCount}`
     const data = await this._get(url)
     return data as Array<BlockData>
   }
@@ -153,7 +153,7 @@ export class Blockchain {
   /// BEGIN PRIVATE METHODS
   private async _get(url: string) {
     try {
-      const res = await axios.get(`${this.apiV1URL}/${url}`)
+      const res = await axios.get(url)
       const { data } = res.data
       return data
     } catch (error) {

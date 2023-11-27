@@ -73,7 +73,7 @@ export class Mempool {
   /// BEGIN PRIVATE METHODS
   private async _get(url: string) {
     try {
-      const res = await axios.get(`${this.apiV1URL}/${url}`)
+      const res = await axios.get(url)
       const { data } = res.data
       return data
     } catch (error) {
