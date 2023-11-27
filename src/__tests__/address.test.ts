@@ -17,7 +17,6 @@ describe.only('Address Wrapper class tests', () => {
   it('should fetch address balance', async () => {
     try {
       const addressBalance = await bitgesellBlockchainSDK.address.getAddressBalance(bitgesellAddress)
-      console.log(addressBalance)
       expect(addressBalance).toBeDefined()
     } catch (error) {
       console.log(error)
