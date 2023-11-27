@@ -23,7 +23,7 @@ export class Transaction {
    * @param txHash
    * getTransactonMerkelProof fetches the MerkelProof of a transaction
    */
-  public async getTransactonMerkelProof(txHash: string) {
+  public async getTransactonMerkleProof(txHash: string) {
     const url = `${this.apiV1URL}/transaction/merkle_proof/${txHash}`
     const data = await this._get(url)
     return data as TransactionMerkelProof
@@ -32,7 +32,7 @@ export class Transaction {
   /// BEGIN PRIVATE METHODS
   private async _get(url: string) {
     try {
-      const res = await axios.get(`${this.apiV1URL}/${url}`)
+      const res = await axios.get(url)
       const { data } = res.data
       return data
     } catch (error) {
