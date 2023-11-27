@@ -16,6 +16,7 @@ export class Address {
    */
   public async getAddressBalance(address: string) {
     const url = `${this.apiV1URL}/address/state/${address}`
+    // console.log(url)
     const data = await this._get(url)
     return data as AddressBalance
   }
@@ -54,7 +55,7 @@ export class Address {
   /// BEGIN PRIVATE METHODS
   private async _get(url: string) {
     try {
-      const res = await axios.get(`${this.apiV1URL}/${url}`)
+      const res = await axios.get(url)
       const { data } = res.data
       return data
     } catch (error) {
