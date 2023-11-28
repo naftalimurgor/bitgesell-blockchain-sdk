@@ -54,7 +54,7 @@ export class Blockchain {
    * getBlocksByDate fetches blocks by date in the format YYYYMMDD
    */
   public async getBlocksByDate(date: string): Promise<Array<Block>> {
-    const url = `${this.apiV1URL}/blocks/${date}`
+    const url = `${this.apiV1URL}/blocks/date/${date}`
     const data = await this._get(url)
     return data as Array<Block>
   }
