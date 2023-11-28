@@ -42,7 +42,8 @@
     "typeRoots": [
       "node_modules/@types",
       "src/types"
-    ]
+    ],
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts"
