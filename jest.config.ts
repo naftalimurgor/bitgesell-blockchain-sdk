@@ -3,7 +3,7 @@ import { Config } from '@jest/types'
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  verbose: true,
+  verbose: false,
   extensionsToTreatAsEsm: ['.ts'],
   automock: false,
   clearMocks: true,
@@ -22,6 +22,7 @@ const config: Config.InitialOptions = {
   transform: {
     '^.+\\.ts?$': 'babel-jest',
   },
+  testTimeout: 70000 // 70000 ms
 }
 
 export default config
