@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BitgesellBlockchainSDK | bitgesell-blockchain-sdk</title>
+	<title>SDKConfig | bitgesell-blockchain-sdk</title>
 	<meta name="description" content="Documentation for bitgesell-blockchain-sdk">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="bitgesellblockchainsdk.html">BitgesellBlockchainSDK</a>
+					<a href="sdkconfig.html">SDKConfig</a>
 				</li>
 			</ul>
-			<h1>Class BitgesellBlockchainSDK</h1>
+			<h1>Interface SDKConfig</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BitgesellBlockchainSDK</span>
+						<span class="target">SDKConfig</span>
 					</li>
 				</ul>
 			</section>
@@ -79,90 +79,68 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="bitgesellblockchainsdk.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="bitgesellblockchainsdk.html#address" class="tsd-kind-icon">address</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="bitgesellblockchainsdk.html#blockchain" class="tsd-kind-icon">blockchain</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="bitgesellblockchainsdk.html#mempool" class="tsd-kind-icon">mempool</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="bitgesellblockchainsdk.html#tx" class="tsd-kind-icon">tx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sdkconfig.html#apikey" class="tsd-kind-icon">api<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sdkconfig.html#baseapiurl" class="tsd-kind-icon">baseAPIURL</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sdkconfig.html#logger" class="tsd-kind-icon">logger</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Bitgesell<wbr>BlockchainSDK<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../interfaces/sdkconfig.html" class="tsd-signature-type">SDKConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="bitgesellblockchainsdk.html" class="tsd-signature-type">BitgesellBlockchainSDK</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/api.ts#L12">api.ts:12</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>config: <a href="../interfaces/sdkconfig.html" class="tsd-signature-type">SDKConfig</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="bitgesellblockchainsdk.html" class="tsd-signature-type">BitgesellBlockchainSDK</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="address" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> address</h3>
-					<div class="tsd-signature tsd-kind-icon">address<span class="tsd-signature-symbol">:</span> <a href="address.html" class="tsd-signature-type">Address</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="apikey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> api<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">api<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/api.ts#L12">api.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/types/index.ts#L12">types/index.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="blockchain" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> blockchain</h3>
-					<div class="tsd-signature tsd-kind-icon">blockchain<span class="tsd-signature-symbol">:</span> <a href="blockchain.html" class="tsd-signature-type">Blockchain</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="baseapiurl" class="tsd-anchor"></a>
+					<h3>baseAPIURL</h3>
+					<div class="tsd-signature tsd-kind-icon">baseAPIURL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/api.ts#L9">api.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/types/index.ts#L10">types/index.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="mempool" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> mempool</h3>
-					<div class="tsd-signature tsd-kind-icon">mempool<span class="tsd-signature-symbol">:</span> <a href="mempool.html" class="tsd-signature-type">Mempool</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/api.ts#L11">api.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/types/index.ts#L11">types/index.ts:11</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="tx" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> tx</h3>
-					<div class="tsd-signature tsd-kind-icon">tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Transaction</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/naftalimurgor/bitgesell-blockchain-sdk/blob/71086fd/src/api.ts#L10">api.ts:10</a></li>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>arg: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
 						</ul>
-					</aside>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -177,44 +155,38 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
-						<a href="address.html" class="tsd-kind-icon">Address</a>
+						<a href="../classes/address.html" class="tsd-kind-icon">Address</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/bitgesellblockchainsdk.html" class="tsd-kind-icon">Bitgesell<wbr>BlockchainSDK</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/blockchain.html" class="tsd-kind-icon">Blockchain</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/mempool.html" class="tsd-kind-icon">Mempool</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/transaction.html" class="tsd-kind-icon">Transaction</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="bitgesellblockchainsdk.html" class="tsd-kind-icon">Bitgesell<wbr>BlockchainSDK</a>
+					<li class="current tsd-kind-interface">
+						<a href="sdkconfig.html" class="tsd-kind-icon">SDKConfig</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="bitgesellblockchainsdk.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="sdkconfig.html#apikey" class="tsd-kind-icon">api<wbr>Key</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="bitgesellblockchainsdk.html#address" class="tsd-kind-icon">address</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="sdkconfig.html#baseapiurl" class="tsd-kind-icon">baseAPIURL</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="bitgesellblockchainsdk.html#blockchain" class="tsd-kind-icon">blockchain</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="bitgesellblockchainsdk.html#mempool" class="tsd-kind-icon">mempool</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="bitgesellblockchainsdk.html#tx" class="tsd-kind-icon">tx</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="sdkconfig.html#logger" class="tsd-kind-icon">logger</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="blockchain.html" class="tsd-kind-icon">Blockchain</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="mempool.html" class="tsd-kind-icon">Mempool</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="transaction.html" class="tsd-kind-icon">Transaction</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/sdkconfig.html" class="tsd-kind-icon">SDKConfig</a>
-					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#addressbalance" class="tsd-kind-icon">Address<wbr>Balance</a>
 					</li>
