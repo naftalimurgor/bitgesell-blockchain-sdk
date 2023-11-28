@@ -7,7 +7,6 @@ describe('Mempool tests', () => {
     }
 
     let bitgesellBlockchainSDK: BitgesellBlockchainSDK
-    const bitgesellAddress = 'bgl1qlmzckh904vze03n0lwzptt5dkmvf2vj3ev4qm9'
 
     beforeAll(() => {
         bitgesellBlockchainSDK = new BitgesellBlockchainSDK(sdkConfig)

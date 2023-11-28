@@ -6,7 +6,7 @@ export type Block = {
   adjustedTimestamp: number
 }
 
-export type SDKConfig = {
+export interface SDKConfig {
   baseAPIURL: string
   logger?: (arg: string) => void
   apiKey?: string

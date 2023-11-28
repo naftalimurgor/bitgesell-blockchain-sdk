@@ -15,6 +15,6 @@ describe('Transaction tests', () => {
     it('should get transaction merkel proof', async () => {
         const merkelProof = await bitgesellBlockchainSDK.tx.getTransactonMerkleProof(txHash)
         expect(merkelProof).toBeDefined()
-        expect(merkelProof).toHaveProperty('merkle')
+        expect(merkelProof).toHaveProperty('merkleProof')
     })
 })

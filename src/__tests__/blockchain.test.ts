@@ -48,14 +48,14 @@ describe('Blockchain API Wrapper tests', () => {
 
   it('should fetch block data by date in yyyy-mmd-dd', async () => {
     /// date yyyymmdd
-    const date = '20231105'
+    const date = '20220305'
     const block = await bitgesellBlockchainSDK.blockchain.getBlockDataByDate(date)
     expect(block).toBeDefined()
   })
 
   it('should fetch blocks by given date', async () => {
     /// date yyyy-mmdd
-    const date = '20231105'
+    const date = '20220305'
     const block = await bitgesellBlockchainSDK.blockchain.getBlocksByDate(date)
     expect(block).toBeDefined()
   })
@@ -72,6 +72,7 @@ describe('Blockchain API Wrapper tests', () => {
   })
 
   it('should fetch block UTXOs by block hash', async () => {
+    const blockHeight = 300
     const block = await bitgesellBlockchainSDK.blockchain.getBlockUTXO(blockHeight)
     expect(block).toBeDefined()
   })
