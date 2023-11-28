@@ -9,7 +9,7 @@ For a full documentation, see the docs:
 
 Install via yarn/npm:
 ```sh
-yarn add bgl-blockchain-sdk # npm i 
+yarn add bitgesell-blockchain-sdk # npm i bitgesell-blockchain-sdk 
 ```
 
 ### Initialization
@@ -44,9 +44,9 @@ To query transacton by the transaction `hash`:
 
 ```javascript
 (async() => {
-    const txHash = 'a transaction hash'
+    const txHash = 'e56d609044b4839d840ef4db4ac0534306cc11b257b8b4a71e8fb7491aaca9a9'
     const transaction = await bitgesellBlockchainSDK.tx.getTransactionByHash(txHash)
-    console.log(txHash)
+    console.log(transaction)
 })()
 ```
 ### Query the Mempool
@@ -69,8 +69,25 @@ To query block by the blockHeight:
 })()
 ```
 
+## Development
+1. Fork repo
+2. Checkout a feature branch
+3. Setup environment:
+```sh
+cd bitgesell-blockchain-sdk/
+npm install
+```
+4. Run unit tests:
+```sh
+cd bitgesell-blockchain-sdk/
+npm test
+```
+NB: Remember to add tests to keep the coverage as reasonable as possible.
+
 ## Documentation
-For complete documenation on how to use this library see the complete docs:
+For complete documenation on how to use this library see the complete [docs](https://naftalimurgor.github.io/bitgesell-blockchain-sdk/)
+
+Try out in this [codepen](https://codepen.io/slax425/pen/PoVdYGm)
 
 ## Support
 Any form of support is highly welcome through contributions, pull requests and feature requests.
