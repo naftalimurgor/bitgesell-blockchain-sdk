@@ -16,5 +16,7 @@ const main = async () => {
         console.log(err)
     }
 }
-
+// parcel bundler
+// bundle for the web
+// us in index.html
 main().catch(err => console.log)
